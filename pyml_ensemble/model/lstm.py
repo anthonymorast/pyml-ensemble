@@ -1,7 +1,6 @@
 from keras.models import Sequential
 from keras.layers import Dense, LSTM, SimpleRNN, Dropout
 
-
 class MyLSTM(object):
     def __init__(self, input_size, num_hidden_layers, hidden_layer_sizes, output_size,
                  epochs=50, batch_size=1, fit_verbose=2, variables=None):

@@ -19,3 +19,9 @@ class ANNModel(Model):
 
     def load_weights(self):
         self.model.set_weights(self.weight_file)
+
+    def save_weights(self):
+        self.model.save_weights(self.weight_file)
+
+    def set_weight_filename(self, filename):
+        self.weight_file = filename

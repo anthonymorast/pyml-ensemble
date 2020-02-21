@@ -34,6 +34,9 @@ class ANN(object):
         """
         return self.model.predict(data)
 
+    def save_weights(self, file_name):
+        self.model.save_weights(file_name)
+
 
     def get_weights(self):
         """

@@ -12,12 +12,12 @@ class Ensemble(object):
 
     def add_model(self, model):
         if not isinstance(model, Model):
-            raise TypeError("model must be of type pyml_ensemble.models.Model")
+            raise TypeError("model must be of type pyml_ensemble.model.Model")
         self.models.append(model)
 
     def set_aggregator(self, aggregator):
         if not isinstance(aggregator, Aggregator):
-            raise TypeError("aggregator must be of type pyml_ensemble.aggregators.Aggregator")
+            raise TypeError("aggregator must be of type pyml_ensemble.aggregator.Aggregator")
         self.aggregator = aggregator
 
     def train(self, x, y):
