@@ -1,5 +1,5 @@
-from .model import Model
-from .ann import ANN
+from pyml_ensemble.model import Model
+from ann import ANN
 
 class ANNModel(Model):
     def __init__(self, input_size, num_hidden_layers, hidden_layer_sizes,

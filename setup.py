@@ -8,5 +8,9 @@ setup(
     author='Anthony Morast',
     author_email='anthony.a.morast@gmail.com',
     license='MIT',
-    packages=find_packages()
+    packages=find_packages(),
+    install_requires=[
+        'scikit-learn',
+        'scipy'
+    ]
 )

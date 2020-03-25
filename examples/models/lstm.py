@@ -3,7 +3,7 @@ from keras.layers import Dense, LSTM, SimpleRNN, Dropout
 
 class MyLSTM(object):
     def __init__(self, input_size, num_hidden_layers, hidden_layer_sizes, output_size,
-                 epochs=50, batch_size=1, fit_verbose=2, variables=None):
+                 epochs=50, batch_size=1, fit_verbose=2, num_timesteps=None):
         self.input_size = input_size
         self.num_hidden_layers = num_hidden_layers
         self.hidden_layer_sizes = hidden_layer_sizes
@@ -11,13 +11,13 @@ class MyLSTM(object):
         self.epochs = epochs
         self.batch_size = batch_size
         self.verbose = fit_verbose
-        self.variables = variables
 
-        self.build_model()
+        #https://stackoverflow.com/questions/53496095/keras-reports-typeerror-unsupported-operand-types-for-nonetype-and-int
+        self.num_timesteps = num_timesteps
 
     def build_model(self):
         self.model = Sequential()
-        self.model.add(LSTM(self.hidden_layer_sizes[0], input_shape=(self.input_size, self.variables),
+        self.model.add(LSTM(self.hidden_layer_sizes[0], input_shape=(self.num_timesteps, self.input_size),
                             return_sequences=True))
         # self.model.add(Dropout(0.2))
         for i in range(1, self.num_hidden_layers - 1):
