@@ -7,6 +7,7 @@ examples (examples/models/). This was to remove the package's dependency on the
 tensorflow package since many ensembles can be created without this package. There are
 some other, smaller dependencies still to make the Ensemble usable out of the box.
 
-
-## Under Construction
-The initial version of PyML Ensemble is currently being developed. Feel free to use and contribute to the project but don't expect too much functionality. Additionally, the PyPi package has not been released yet.
+To view the examples and check out the more powerful models visit the project's
+[GitHub page](https://github.com/anthonymorast/pyml-ensemble/). For convenience,
+view [powerful models here](https://github.com/anthonymorast/pyml-ensemble/tree/master/examples/models)
+and [example usage here](https://github.com/anthonymorast/pyml-ensemble/tree/master/examples/ensembles).
